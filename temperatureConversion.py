@@ -1,4 +1,4 @@
-def convertToCelcius(userTemperatureValue, userTemperatureUnit):
+def convertToCelcius(userTemperatureValue, userTemperatureUnit): # function that converts temperatures to celcius
     match userTemperatureUnit.lower():
         case 'kelvin':
             degreesCelcius = userTemperatureValue - 273.15
@@ -7,21 +7,16 @@ def convertToCelcius(userTemperatureValue, userTemperatureUnit):
 
     return(degreesCelcius)
 
-def convertToFarenheit(userTemperatureValue, userTemperatureUnit):
-    match userTemperatureUnit.lower():
+def convertToFarenheit(userTemperatureValue, userTemperatureUnit): # function that converts temperatures to farenheit
+    match userTemperatureUnit.lower(): # case statement that checks fo rcases that match the input from userTemperatrureUnit
         case 'celcius':
             degreesFarenheit = userTemperatureValue*(9/5) + 32
         case 'kelvin':
             degreesFarenheit = 1.8*(userTemperatureValue-273) + 32
     
     return(degreesFarenheit)
-            
 
-
-    degreesFarenheit = userTemperatureValue*(9/5) + 32
-    return(degreesFarenheit)
-
-def convertToKelvin(userTemperatureValue, userTemperatureUnit):
+def convertToKelvin(userTemperatureValue, userTemperatureUnit): # function that converts temperatures to kelvin
     match userTemperatureUnit.lower():
         case 'farenheit':
             degreesKelvin = (5/9)*userTemperatureValue + 459.67
